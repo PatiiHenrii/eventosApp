@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultra.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>EventosApp</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="style/style.css" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Cadastro de eventos</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a href="/eventos" class="waves-effect waves-light btn red lighten-1">
+            <i class="material-icons left">view_list</i>
+            Lista de Eventos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <form class="card-panel" method="post">
+        <th:block th:include="mensagemValidacao"></th:block>
+        Nome: <input type="text" value="" name="nome" />
+        <div class="row">
+          <div class="input-field col s6">
+            Local: <input type="text" value="" name="local" />
+          </div>
+          <div class="input-field col s3">
+            Data: <input type="date" value="" name="data" />
+          </div>
+          <div class="input-field col s3">
+            Horario: <input type="time" value="" name="horario" />
+          </div>
+        </div>
+        <button type="submit" class="waves-effect waves-light btn">Adicionar</button>
+      </form>
+    </div>
+  </div>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
